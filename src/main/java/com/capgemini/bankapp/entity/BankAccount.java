@@ -16,6 +16,10 @@ public class BankAccount {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)  
+	@Column(name = "id")
+	private int id;
+	
+	@Column(name="Account_Holder_Name")
 	private String accountHolderName;
 	
 	@Column(name="Balance")
@@ -54,6 +58,14 @@ public class BankAccount {
 	}
 	public void setAccountType(String accountType) {
 		this.accountType = accountType;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	@Override
